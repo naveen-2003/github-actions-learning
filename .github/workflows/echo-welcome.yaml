@@ -3,6 +3,6 @@ on:
   workflow_dispatch: 
 jobs:
     echo-welcome:
-      runs-on: ubuntu-18.04
+      runs-on: ubuntu-latest
       steps:
         - run: echo "Welcome, Naveen!, Congrats on executing your first GitHub Actions...🎉"
