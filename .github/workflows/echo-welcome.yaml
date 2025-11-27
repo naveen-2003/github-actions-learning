@@ -1,0 +1,8 @@
+name: First Github action
+on:
+  workflow_dispatch: 
+jobs:
+    echo-welcome:
+      runs-on: ubuntu-18.04
+      steps:
+        - run: echo "Welcome, Naveen!, Congrats on executing your first GitHub Actions...🎉"
