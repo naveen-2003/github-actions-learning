@@ -1,0 +1,27 @@
+name: Multi-Job Action
+on:
+  workflow_dispatch:
+
+jobs:
+  echo-welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome msg with echo
+        run: echo "Hi Naveen"
+  
+        echo-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome msg with python
+        shell: python
+        run: print("Welcome to the Multi-Job action")
+        
+  echo-from-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/hello-world-javascript-action@ebdda30dcb464fa90dc49c837d7b5506f49932d0 
+        with:
+          who-to-greet: Naveen
+
+
+          
