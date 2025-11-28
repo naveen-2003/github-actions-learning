@@ -10,7 +10,4 @@ jobs:
         - name: Again Welcome from python
           shell: python
           run: print("Welcome again Naveen!!")
-        - name: Welcome again from action
-          uses: actions/hello-world-javascript-action@ebdda30dcb464fa90dc49c837d7b5506f49932d0 
-          with:
-            who-to-greet: Naveen
+           
