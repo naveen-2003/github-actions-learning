@@ -9,7 +9,7 @@ jobs:
       - name: Welcome msg with echo
         run: echo "Hi Naveen"
   
-        echo-python:
+  echo-python:
     runs-on: ubuntu-latest
     steps:
       - name: Welcome msg with python
