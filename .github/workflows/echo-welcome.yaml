@@ -5,4 +5,9 @@ jobs:
     echo-welcome:
       runs-on: ubuntu-latest
       steps:
-        - run: echo "Welcome, Naveen!, Congrats on executing your first GitHub Actions...🎉"
+        - name: Welcome message!
+          run: echo "Welcome, Naveen!, Congrats on executing your first GitHub Actions...🎉"
+        - name: Again Welcome from python
+          shell: python
+          run: print("Welcome again Naveen!!")
+           
