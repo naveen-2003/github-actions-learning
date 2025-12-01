@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Running the custom action
-        uses: naveen-2003/github-actions-learning/.github/actions/custom-action
+        uses: ./.github/actions/custom-action
         with:
           name: "Naveen N"
