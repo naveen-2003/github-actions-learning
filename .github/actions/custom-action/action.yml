@@ -1,0 +1,20 @@
+name: My Custom actions
+description: "This action get a name and welcome the person"
+inputs:
+  name:
+    required: true
+    description: "Name of the person whom to greet."
+    default: "Naveen"
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      id: welcome-step
+      run: |
+        echo "Welcome, ${{inputs.name}}"
+        echo "msg='Welcome, ${{inputs.name}}'" >> $GITHUB_OUTPUT
+    
+outputs:
+  msg: 
+    description: "Welcome message"
+    value: ${{ steps.welcome-step.outputs.msg }}
