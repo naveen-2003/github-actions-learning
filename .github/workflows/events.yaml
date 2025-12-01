@@ -5,8 +5,8 @@ on:
       - ".github/workflow/**"
     branches:
       - main
-  schedule:
-    - cron: "19 9 1 12 1"
+  # schedule:
+  #   - cron: "24 10 1 12 1"
   create:
   delete: 
   issues: 
@@ -26,4 +26,4 @@ jobs:
   events-test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{github.event_name}}
+      - run: cat $GITHUB_EVENT_PATH
