@@ -6,7 +6,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "02 10 1 12 1"
+    - cron: "05 10 1 12 1"
   create:
   delete: 
   issues: 
@@ -19,6 +19,7 @@ on:
   workflow_run: 
     workflows: 
       - "Trigger for events workflow"
+  workflow_dispatch:
 jobs:
   events-test:
     runs-on: ubuntu-latest
