@@ -5,6 +5,8 @@ on:
 jobs:
   job-1:
     runs-on: ubuntu-latest
+    outputs:
+      VALUE2: ${{steps.set-value-1.outputs.VALUE2}}
     steps:
       - run: echo "VALUE1='Values from job-1, step-1'" >> $GITHUB_ENV
         id: set-value-1
