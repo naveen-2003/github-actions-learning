@@ -5,4 +5,4 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - run: Triggering the events workflow
+      - run: echo "Triggering the events workflow"

@@ -6,7 +6,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "05 10 1 12 1"
+    - cron: "07 10 1 12 1"
   create:
   delete: 
   issues: 
