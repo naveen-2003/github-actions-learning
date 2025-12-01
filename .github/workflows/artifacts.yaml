@@ -1,0 +1,23 @@
+name: Artifacts
+on:
+  workflow_dispatch: 
+jobs:
+  upload-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create a file
+        run: echo "This is the context of the file.txt" > file.txt
+      - name: Upload the File to Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sample-file
+          path: file.txt
+  download-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the File from Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: sample-file
+      - name: Displaying the file
+        run: cat file.txt
