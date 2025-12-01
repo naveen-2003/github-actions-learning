@@ -1,0 +1,11 @@
+name: Test Custom Action
+on:
+  workflow_dispatch: 
+jobs:
+  test-custom:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running the custom action
+        uses: ./.github/actions/custom-action
+        with:
+          name: "Naveen N"
