@@ -6,7 +6,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "46 15 1 12 1"
+    - cron: "19 9 1 12 1"
   create:
   delete: 
   issues: 
@@ -17,6 +17,8 @@ on:
     paths: 
       - "README.md"
   workflow_run: 
+    types: 
+      - completed
     workflows: 
       - "Trigger for events workflow"
   workflow_dispatch:
