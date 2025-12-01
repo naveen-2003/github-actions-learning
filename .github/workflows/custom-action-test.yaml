@@ -5,6 +5,7 @@ jobs:
   test-custom:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Running the custom action
         uses: ./.github/actions/custom-action
         with:
