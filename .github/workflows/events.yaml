@@ -1,0 +1,26 @@
+name: Events
+on:
+  push:
+    paths: 
+      - ".github/workflow/**"
+    branches:
+      - main
+  schedule:
+    - cron: "02 10 1 12 1"
+  create:
+  delete: 
+  issues: 
+    types:
+      - opened
+      - closed
+  pull_request:
+    paths: 
+      - "README.md"
+  workflow_run: 
+    workflows: 
+      - "Trigger for events workflow"
+jobs:
+  events-test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{github}}
