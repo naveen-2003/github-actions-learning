@@ -1,0 +1,10 @@
+name: Test for DataLakeDocs
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: mkdir testdir
+      - run: cd testdir
+      - run: pwd
